@@ -3,12 +3,15 @@ import VueRouter, { RouteConfig } from 'vue-router';
 //Routes
 import login from '@/views/login/routes/index'; //Rota de login
 import dashboard from '@/views/dashboard/routes/index'; //Rota do dashboard
-
+import forgotPassword from '@/views/forgot_password/routes/index';
+import recoveryPassword from '@/views/recovery_password/routes/index';
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   ...login,
-  ...dashboard
+  ...dashboard,
+  ...forgotPassword,
+  ...recoveryPassword
 ];
 
 const router = new VueRouter({
@@ -27,8 +30,8 @@ router.beforeEach((to, from, next) => {
   const currentUrl = to.name;
   let tokenAuth;
 
-  if (store.getItem('token') !== undefined && store.getItem('token') !== null) {
-    tokenAuth = store.getItem('token')
+  if (store.getItem('@beerVueAdmintoken') !== undefined && store.getItem('@beerVueAdmintoken') !== null) {
+    tokenAuth = store.getItem('@beerVueAdmintoken')
   }
 
   const require = to.matched.some(record => record.meta.requiresAuth),

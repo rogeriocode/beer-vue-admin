@@ -1,0 +1,29 @@
+@mixin media-min($value) {
+    @if map-has-key($grid-breakpoints,$value) {
+      @media all and (min-width: map-get($grid-breakpoints , $value )) {
+        @content;
+      }
+    } @else {
+      @warn "Não existe o "#{$value}
+    }
+  };
+  
+  @mixin media-max($value) {
+    @if map-has-key($grid-breakpoints, $value ) {
+      @media all and (max-width: map-get($grid-breakpoints, $value)) {
+        @content;
+      }
+  
+    } @else {
+      @warn "Não existe o"#{$value}
+    }
+  };
+
+  @mixin flex {
+    display: flex;
+    // display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox; 
+  }

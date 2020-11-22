@@ -1,5 +1,5 @@
 {
-  "name": "beer3",
+  "name": "beer-vue-admin",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,9 +7,11 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
+    "cypress:open": "cypress open",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "check-types": "^11.1.2",
     "core-js": "^3.6.5",
     "element-ui": "^2.14.1",
     "vue": "^2.6.11",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
+    "@types/check-types": "^7.3.1",
     "@types/mocha": "^5.2.4",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",

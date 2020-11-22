@@ -1,0 +1,35 @@
+$--color-primary: #8F67EF ;
+$--color-secondary: #67EFE6;
+$--color-light: #FAFDFB;
+$--color-success: #2ad17e;
+$--color-warning: #FFBA00;
+$--color-danger: #ff4949;
+//Custom
+$--color-info: rgb(229, 229, 233);
+$--color-dark: #454647;
+$--color-default: #707070;
+$--color-medium: #B8B8B8;
+
+:root {
+    $--color-primary: $--color-primary ;
+    $--color-secondary: $--color-secondary;
+    $--color-light: $--color-light;
+    $--color-success: $--color-success;
+    $--color-warning: $--color-warning;
+    $--color-danger: $--color-danger;
+    //Custom
+    $--color-info: $--color-info;
+    $--color-dark: $--color-dark;
+    $--color-default: $--color-default;
+    $--color-medium: $--color-medium; 
+}
+
+
+$grid-breakpoints: (
+xs: 500px, // <
+sm: 768px, // >
+md: 992px, // ≥
+lg: 1200px, // ≥
+ga: 1400px,
+xl: 1920px // ≥
+);

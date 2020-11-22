@@ -1,0 +1,15 @@
+.el-form--label-top .el-form-item__label {
+    padding: 0px !important;
+    margin-bottom: -.5rem;
+}
+
+.el-input__inner {
+    border-color: rgba($--color-primary,.6) !important;
+    &:focus {
+        border-color: $--color-primary !important;
+    }
+}
+
+.el-radio__label,.el-checkbox__label {
+    font-weight: 400 ;
+}

@@ -5,9 +5,10 @@ import store from './store';
 //Component global
 import Element from "element-ui";
 import locale from "element-ui/lib/locale/lang/pt-br";
-import * as globalInterface from "@/models/global/index.ts";
+import * as globalInterface from "@/models/global/global-interface.ts";
 import  index  from "@/global";
-import 'element-ui/lib/theme-chalk/index.css';
+import check from 'check-types';
+import '@/styles/main.scss';
 
 Vue.use(index);
 

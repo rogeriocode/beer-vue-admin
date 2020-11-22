@@ -46,6 +46,7 @@ export default class ForgotPassword extends Vue {
                 </el-form>
             </div>
         </div>
+        <router-link class="backToLogin" :to="{name:'login'}">Voltar para o Login</router-link>
     </section>
 </template>
 

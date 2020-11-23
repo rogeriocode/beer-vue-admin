@@ -57,7 +57,7 @@ export default class Login extends Vue {
         </el-form>
       </div>
     </div>
-    <span class="developed">Developed with <i class="ion-ios-heart heart"></i> by <el-link @click="viewGithug()">@rogeiocode</el-link></span>
+    <span class="developed">Developed with <i class="ion-ios-heart heart"></i> by <el-link @click="viewGithug()">@rogeriocode</el-link></span>
   </section>
 </template>
 

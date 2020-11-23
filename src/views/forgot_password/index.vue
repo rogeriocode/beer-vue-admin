@@ -19,8 +19,8 @@ export default class ForgotPassword extends Vue {
             this.isLoading = true;
             setTimeout(() => {
                 this.$message.success("Você recebera um e-mail com instruções para recuperar sua senha!");
-                this.isLoading=false;
-                this.$router.push({name:'login'})
+                this.isLoading = false;
+                this.$router.push({name:'recovery.password',params:{hash:'hashtext'}})
             }, 500);
         });
     }

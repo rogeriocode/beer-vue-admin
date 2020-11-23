@@ -29,6 +29,9 @@ export default class Login extends Vue {
       }, 500);
     });
   }
+  viewGithug() {
+    window.open('https://github.com/rogeriocode','_blank')
+  }
 }
 </script>
 <template>
@@ -54,7 +57,7 @@ export default class Login extends Vue {
         </el-form>
       </div>
     </div>
-    <span class="developed">Developed with S2 by <router-link to="https://github.com/rogeriocode">@rogeiocode</router-link></span>
+    <span class="developed">Developed with <i class="ion-ios-heart heart"></i> by <el-link @click="viewGithug()">@rogeiocode</el-link></span>
   </section>
 </template>
 

@@ -51,16 +51,20 @@
       padding: 1rem;
       font-size: 1rem;
       box-sizing: border-box;
+      margin-bottom: 1rem;
     }
   }
-  .developed{
+  .developed {
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: $--color-light;
-    a{
+    a {
       color: $--color-light;
       text-decoration: none;
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
+  }
+  .heart {
+    color: rgb(211, 67, 98);
   }
 }

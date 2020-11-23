@@ -1,8 +1,17 @@
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Prop } from "vue-property-decorator";
 
 @Component({})
 export default class RecoveryPassword extends Vue {
+  @Prop(String) readonly hash: string | undefined;
+
+  created() {
+    if (!this.hash) return this.$router.push({ name: "login" });
+    this.validateHash().then(res => {
+      if (!res) return this.$router.push({ name: "login" });
+    });
+  }
+
   form: { [key: string]: any } = {
     email: "",
     password: "",
@@ -23,6 +32,7 @@ export default class RecoveryPassword extends Vue {
     ]
   };
   isLoading: boolean = false;
+  //Methods
   recoverPassword(ref: any) {
     (this.$refs[ref] as any).validate(valid => {
       if (!valid) return false;
@@ -32,6 +42,12 @@ export default class RecoveryPassword extends Vue {
         this.isLoading = false;
         this.$router.push({ name: "login" });
       }, 500);
+    });
+  }
+
+  validateHash() {
+    return new Promise((resolve, reject) => {
+      setInterval(() => resolve(true), 1000);
     });
   }
 }
